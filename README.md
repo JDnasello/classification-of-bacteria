@@ -43,9 +43,7 @@ El tamaño corresponde a la longitud promedio observada mediante microscopía.
 
 La longitud real puede estimarse mediante:
 
-\[
-L=\frac{L_p\cdot FE}{M}
-\]
+$L=\frac{L_p\cdot FE}{M}$
 
 donde:
 
@@ -89,9 +87,7 @@ Durante el entrenamiento el perceptrón:
 
 Para cada peso:
 
-\[
-w*{nuevo}=w*{viejo}+\eta\cdot error\cdot entrada
-\]
+$w_{nuevo}=w_{viejo}+\eta\cdot error\cdot entrada$
 
 donde:
 
