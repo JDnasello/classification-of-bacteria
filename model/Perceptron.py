@@ -80,8 +80,6 @@ class Perceptron:
             era_errors = self.training_error(training_samples)
             self.training_history.append(era_errors)
 
-            print(f"Época {era}: {era_errors} errores")
-
             if era_errors == 0:
                 print(f"Entrenamiento finalizado en la época {era}")
                 break
