@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto implementa desde cero un perceptrón simple utilizando Python, sin emplear bibliotecas de Machine Learning como Scikit-Learn o TensorFlow.
+Este proyecto implementa desde cero un perceptrón simple utilizando Python.
 
 El objetivo consiste en entrenar una neurona artificial capaz de clasificar bacterias en dos categorías:
 
