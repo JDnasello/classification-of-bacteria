@@ -77,30 +77,35 @@ class Perceptron:
                 if error != 0:
                     self.update_weights(bacterium.features, error)
 
-            era_errors = self.training_error(training_samples)
-            self.training_history.append(era_errors)
+            accuracy = self.training_accuracy(training_samples)
+            self.training_history.append(accuracy)
 
-            if era_errors == 0:
-                print(f"Entrenamiento finalizado en la época {era}")
+            if accuracy >= 95:
+                print(
+                    f"Entrenamiento finalizado en la época {era} "
+                    f"con una precisión de {accuracy:.2f}%"
+                )
                 break
 
             era += 1
 
-    def training_error(self, training_samples):
+    def training_accuracy(self, training_samples):
         """
         Función que calcula la cantidad de bacterias del conjunto de entrenamiento que siguen siendo clasificadas incorrectamente.
         """
 
-        errors = 0
+        correct_predict = 0
 
         for bacterium in training_samples:
 
             result = self.predict(bacterium.features)
 
-            if result != bacterium.expected:
-                errors += 1
+            if result == bacterium.expected:
+                correct_predict += 1
 
-        return errors
+        accuracy = (correct_predict / len(training_samples)) * 100
+
+        return accuracy
 
     def validate(self, validation_samples):
         """

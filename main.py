@@ -28,7 +28,7 @@ if failed_samples:
     print("\nBacterias mal clasificadas:")
     for bacterium in failed_samples:
         print(
-            f"ID: {bacterium.id} | "
+            f"ID: {bacterium.ids} | "
             f"Tamaño: {bacterium.features[0]:.2f} | "
             f"Crecimiento: {bacterium.features[1]:.2f} | "
             f"Esperado: {int(bacterium.expected)}"
